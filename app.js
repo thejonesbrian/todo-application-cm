@@ -1,7 +1,12 @@
 const h1 = document.querySelector('h1')
-console.log(h1.textContent)
+const todoList = document.querySelector('#todo-list')
+//console.log(h1.textContent)
 
 const button = document.querySelector('#todo-entry');
 button.addEventListener('click', function (e) {
-    console.log('click')
+    const text = document.getElementById('todo-text');
+    const li = document.createElement('li')
+    li.textContent = text.value;
+    todoList.appendChild(li);
+    //console.log(text.value);
 })
